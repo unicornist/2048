@@ -1,30 +1,24 @@
-@font-face {
-    font-family: "Clear Sans";
-    src: url("ClearSans-Light-webfont.eot");
-    src: url("ClearSans-Light-webfont.eot?#iefix") format("embedded-opentype"),
-         url("ClearSans-Light-webfont.svg#clear_sans_lightregular") format("svg"),
-         url("ClearSans-Light-webfont.woff") format("woff");
-    font-weight: 200;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: "Clear Sans";
+//     font-weight: 200;
+//     src:url(IRANSLW.woff2) format("woff2"), url(IRANSLW.woff) format("woff");
+// }
+
+// @font-face {
+//     font-family: "Clear Sans";
+//     font-weight: normal;
+//     src:url(IRANSW.woff2) format("woff2"), url(IRANSW.woff) format("woff");
+// }
+
+// @font-face {
+//     font-family: "Clear Sans";
+//     font-weight: 700;
+//     src:url(IRANSBW.woff2) format("woff2"), url(IRANSBW.woff) format("woff");
+// }
 
 @font-face {
-    font-family: "Clear Sans";
-    src: url("ClearSans-Regular-webfont.eot");
-    src: url("ClearSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
-         url("ClearSans-Regular-webfont.svg#clear_sansregular") format("svg"),
-         url("ClearSans-Regular-webfont.woff") format("woff");
-    font-weight: normal;
+    font-family: 'Clear Sans';
     font-style: normal;
+    font-weight: 400;
+    src: url('Iran-Sans.eot?') format('eot'), url('Iran-Sans.woff') format('woff'), url('Iran-Sans.svg') format('svg'), url('Iran-Sans.ttf') format('truetype');
 }
-
-@font-face {
-    font-family: "Clear Sans";
-    src: url("ClearSans-Bold-webfont.eot");
-    src: url("ClearSans-Bold-webfont.eot?#iefix") format("embedded-opentype"),
-         url("ClearSans-Bold-webfont.svg#clear_sansbold") format("svg"),
-         url("ClearSans-Bold-webfont.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-

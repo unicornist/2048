@@ -47,8 +47,9 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 .scores-container {
-  float: right;
-  text-align: right; }
+  /* float: right; */
+  /* text-align: right; */
+  }
 
 .score-container, .best-container {
   position: relative;
@@ -56,13 +57,16 @@ h1.title {
   background: #bbada0;
   padding: 15px 25px;
   font-size: 25px;
-  height: 25px;
-  line-height: 47px;
+  height: 35px;
+  line-height: 60px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
-  margin-top: 8px;
-  text-align: center; }
+  float: right;
+  text-align: center;
+  margin: 5px;
+  width: calc(50% - 60px);
+  }
   .score-container:after, .best-container:after {
     position: absolute;
     width: 100%;
@@ -90,10 +94,12 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "امتیاز این بازی شما";
+  }
 
 .best-container:after {
-  content: "Best"; }
+  content: "بهترین امتیاز شما";
+  }
 
 p {
   margin-top: 0;
@@ -199,7 +205,9 @@ hr {
       .game-container .game-message.game-won a.keep-playing-button {
         display: inline-block; }
     .game-container .game-message.game-won, .game-container .game-message.game-over {
-      display: block; }
+      display: block;
+      direction: rtl;
+      }
 
 .grid-container {
   position: absolute;
@@ -507,15 +515,18 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
+.above-game {
+  direction: rtl;
+}
 .above-game:after {
   content: "";
   display: block;
   clear: both; }
 
 .game-intro {
-  float: left;
-  line-height: 42px;
-  margin-bottom: 0; }
+  line-height: 50px;
+  margin-bottom: 0;
+  }
 
 .restart-button {
   display: inline-block;
@@ -528,7 +539,8 @@ hr {
   line-height: 42px;
   display: block;
   text-align: center;
-  float: right; }
+  margin: 5px;
+  }
 
 .game-explanation {
   margin-top: 50px; }
@@ -552,23 +564,24 @@ hr {
   .score-container, .best-container {
     margin-top: 0;
     padding: 15px 10px;
-    min-width: 40px; }
+    width: calc(50% - 30px);
+    }
 
   .heading {
     margin-bottom: 10px; }
 
   .game-intro {
-    width: 55%;
     display: block;
     box-sizing: border-box;
-    line-height: 1.65; }
+    line-height: 1.65;
+    }
 
   .restart-button {
-    width: 42%;
     padding: 0;
     display: block;
     box-sizing: border-box;
-    margin-top: 2px; }
+    margin: 0 5px 10px;
+    }
 
   .game-container {
     margin-top: 17px;

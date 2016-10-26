@@ -62,7 +62,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  inner.textContent = FarsiDigits(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -109,24 +109,24 @@ HTMLActuator.prototype.updateScore = function (score) {
   var difference = score - this.score;
   this.score = score;
 
-  this.scoreContainer.textContent = this.score;
+  this.scoreContainer.textContent = FarsiDigits(this.score);
 
   if (difference > 0) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
-    addition.textContent = "+" + difference;
+    addition.textContent = "+" + FarsiDigits(difference);
 
     this.scoreContainer.appendChild(addition);
   }
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
-  this.bestContainer.textContent = bestScore;
+  this.bestContainer.textContent = FarsiDigits(bestScore);
 };
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? "برنده شدید!" : "شما باختید!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
@@ -137,3 +137,10 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };
+
+
+function FarsiDigits(txt) {
+  for (var i = 0; i < 10; i++)
+    txt = (txt+'').replace(new RegExp(i+'', 'g'), String.fromCharCode((i+'').charCodeAt(0) + (0x06f0 - 0x0030)));
+  return txt;
+}
