@@ -96,6 +96,9 @@ GameManager.prototype.actuate = function () {
     terminated: this.isGameTerminated()
   });
 
+  var S = location.search.match(/s=([^&]+)/)[1];
+  if (S)
+    jQuery.post("/api/"+S+"/"+this.score);
 };
 
 // Represent the current game as an object
